@@ -1,0 +1,82 @@
+name: New compatibility report
+description: Create a new game compatibility report.
+title: "[TITLE_ID] GameTitle"
+body:
+  - type: checkboxes
+    attributes:
+      label: "Confirm the following before submitting a report:"
+      options:
+        - label: I have used an official release of the emulator.
+          required: true
+        - label: The game dump originates from a copy of the game that I own.
+          required: true
+        - label: I have verified that there are no other reports identical to this one.
+          required: true
+  
+  - type: input
+    id: game_name
+    attributes:
+      label: Game Name
+      placeholder: Insert the name of the game
+    validations:
+      required: true
+
+  - type: input
+    id: title_id
+    attributes:
+      label: Title ID
+      placeholder: ex. CUSA02394
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Emulator version
+      options:
+        - alpha 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows
+        - Linux (Wine)
+        - Linux (not available yet)
+        - MacOS (not available yet)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current status
+      options:
+        - Playable
+        - In game
+        - Menus
+        - Boots
+        - Nothing
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the behavior of the game and paste any errors from the log
+      placeholder: "If there are any errors, paste them here. They will be near the end of the log and will usually start with \"FATAL: ...\""
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If the game works, add screenshots here
+      placeholder: Drag and drop the images here
+    validations:
+      required: false
