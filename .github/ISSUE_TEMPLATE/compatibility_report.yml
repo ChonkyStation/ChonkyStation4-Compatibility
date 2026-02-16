@@ -76,7 +76,7 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
-      description: If the game works, add screenshots here
+      description: If the game displays anything, add screenshots here
       placeholder: Drag and drop the images here
     validations:
       required: false
