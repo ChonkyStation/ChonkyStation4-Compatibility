@@ -68,7 +68,7 @@ body:
     attributes:
       label: Description
       description: Describe the behavior of the game and paste any errors from the log
-      placeholder: "If there are any errors, paste them here. They will be near the end of the log and will usually start with \"FATAL: ...\""
+      placeholder: "If there are any errors, paste them here. They will be near the end of the log and will usually start with \"FATAL: ...\" or \"Linker: Called unresolved symbol ...\""
     validations:
       required: true
 
